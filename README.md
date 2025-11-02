@@ -35,7 +35,7 @@ Git: обязательный минимум
 git config --global user.name "my username"
 kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ git config --global user.email "my email"
 ```
-Далее создаем ключ rsa c 2048 битами, регистрируем его и подписываем:
+Далее создаем ключ rsa c 2048 битами на неограниченный срок, регистрируем его и подписываем:
 ```
 kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ gpg --full-generate-key
 kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ gpg --list-secret-keys --keyid-format=long
