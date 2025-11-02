@@ -32,8 +32,8 @@ kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ docker compose 
 Git: обязательный минимум
 Конфигурация и подпись коммитов
 ```
-git config --global user.name KingOfDBox
-kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ git config --global user.email janychj@gmail.com
+git config --global user.name "my username"
+kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ git config --global user.email "my email"
 ```
 Далее создаем ключ rsa c 2048 битами, регистрируем его и подписываем:
 ```
