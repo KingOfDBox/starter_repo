@@ -38,6 +38,7 @@ kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ git config --gl
 Далее создаем ключ rsa c 2048 битами, регистрируем его и подписываем:
 ```
 kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ gpg --full-generate-key
+kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ gpg --list-secret-keys --keyid-format=long
 git config --global user.signingkey KEYID
 git config --global commit.gpgsign true
 ```
