@@ -77,3 +77,48 @@ Date:   Sat Nov 8 10:13:18 2025 +0600
  app/calc.py | 6 ++----
  1 file changed, 2 insertions(+), 4 deletions(-)
 ```
+Hooks и pre-commit
+Создали файл .pre-commit-config.yaml и установили pre-commit
+```
+serkingofdbox@DESKTOP-5S32NBH:~/tmp/starter_repo/starter_repo$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+serkingofdbox@DESKTOP-5S32NBH:~/tmp/starter_repo/starter_repo$ pre-commit -a
+usage: pre-commit [-h] [-V]
+                  {autoupdate,clean,gc,init-templatedir,install,install-hooks,migrate-config,run,sample-config,try-repo,uninstall,validate-config,validate-manifest,help,hook-impl}
+                  ...
+pre-commit: error: unrecognized arguments: -a
+serkingofdbox@DESKTOP-5S32NBH:~/tmp/starter_repo/starter_repo$ pre-commit run -a
+An error has occurred: InvalidConfigError:
+=====> .pre-commit-config.yaml is not a file
+Check the log at /home/serkingofdbox/.cache/pre-commit/pre-commit.log
+serkingofdbox@DESKTOP-5S32NBH:~/tmp/starter_repo/starter_repo$ pre-commit run -a
+[INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+trim trailing whitespace.................................................Passed
+fix end of files.........................................................Failed
+- hook id: end-of-file-fixer
+- exit code: 1
+- files were modified by this hook
+
+Fixing requirements.txt
+Fixing README.md
+Fixing app/calc.py
+Fixing scripts/bisect_test.sh
+Fixing docs/adr/README.md
+Fixing app/calc_good.py
+Fixing app/__init__.py
+Fixing tests/test_calc.py
+Fixing scripts/mini-smoke.sh
+Fixing compose.yaml
+Fixing app/calc_buggy.py
+Fixing tests/test_smoke.py
+Fixing docs/adr/templates/adr-template.md
+
+check yaml...............................................................Passed
+check json...........................................(no files to check)Skipped
+check for added large files..............................................Passed
+```
+Добавка gitleaks
+<img width="925" height="294" alt="image" src="https://github.com/user-attachments/assets/c6c2fe15-8452-428a-9ff0-49238034881a" />
