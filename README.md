@@ -49,3 +49,31 @@ Switched to a new branch 'feature/setup'
 kingofdbox@DESKTOP-CBS8NC0:~/projects/starter_repo/starter_repo$ git fetch origin && git rebase origin/main
 Current branch feature/setup is up to date.
 ```
+Bisect: поиск регрессии
+Запускаем скрипт bisect_demo_init.sh и создем коммит good_baseline
+```
+serkingofdbox@DESKTOP-5S32NBH:~/tmp/starter_repo/starter_repo$ bash scripts/bisect_demo_init.sh
+[main b5e2311] [demo] add calc_good.py
+ 1 file changed, 6 insertions(+)
+ create mode 100644 app/calc_good.py
+[main 6d05d64] [demo] introduce bug
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+[ok] created tag good_baseline and bad HEAD
+```
+Поиск плохого коммита
+```
+serkingofdbox@DESKTOP-5S32NBH:~/tmp/starter_repo/starter_repo$ git bisect start
+status: waiting for both good and bad commits
+serkingofdbox@DESKTOP-5S32NBH:~/tmp/starter_repo/starter_repo$ git bisect bad HEAD
+status: waiting for good commit(s), bad commit known
+serkingofdbox@DESKTOP-5S32NBH:~/tmp/starter_repo/starter_repo$ git bisect good good_baseline
+6d05d64bd62aa0cdb1ac3e0f8b152f11d03bc8bc is the first bad commit
+commit 6d05d64bd62aa0cdb1ac3e0f8b152f11d03bc8bc
+Author: Student <student@example.com>
+Date:   Sat Nov 8 10:13:18 2025 +0600
+
+    [demo] introduce bug
+
+ app/calc.py | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+```
