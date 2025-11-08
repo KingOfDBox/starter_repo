@@ -121,4 +121,5 @@ check json...........................................(no files to check)Skipped
 check for added large files..............................................Passed
 ```
 Добавка gitleaks
-<img width="925" height="294" alt="image" src="https://github.com/user-attachments/assets/c6c2fe15-8452-428a-9ff0-49238034881a" />
+<img width="1764" height="265" alt="image" src="https://github.com/user-attachments/assets/3bc84bf1-f539-438d-98d5-39c3ced8bd7c" />
+
